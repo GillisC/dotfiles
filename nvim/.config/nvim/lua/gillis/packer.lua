@@ -16,9 +16,6 @@ return require('packer').startup(function(use)
     use {
         "rebelot/kanagawa.nvim",
         as = "kanagawa",
-        config = function()
-            vim.cmd("colorscheme kanagawa")
-        end
     }
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -32,14 +29,6 @@ return require('packer').startup(function(use)
     use "williamboman/mason-lspconfig.nvim" -- Bridges Mason with LSP
     use "L3MON4D3/LuaSnip"
     use 'davidgranstrom/nvim-markdown-preview'
-
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' }, -- optional, for file icons
-        config = function()
-            require("nvim-tree").setup()
-        end
-    }
     use {
         "nvim-lualine/lualine.nvim",
         requires = { "nvim-tree/nvim-web-devicons", opt=true }
