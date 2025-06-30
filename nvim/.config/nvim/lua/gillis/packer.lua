@@ -76,4 +76,5 @@ return require('packer').startup(function(use)
             require("conform").setup()
         end
     }
+    use "RRethy/nvim-base16"
 end)
