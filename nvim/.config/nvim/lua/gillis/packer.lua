@@ -66,4 +66,10 @@ return require('packer').startup(function(use)
         end
     }
     use "RRethy/nvim-base16"
+    use {
+        "NvChad/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup()
+        end
+    }
 end)
