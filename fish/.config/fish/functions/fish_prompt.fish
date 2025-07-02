@@ -21,10 +21,10 @@ function fish_prompt --description 'Informative prompt'
 
         set -l time (date "+%H:%M:%S")
         set -l user (set_color brblue)$USER
-        set -l host (prompt_hostname)
+        set -l host (set_color brblue)(prompt_hostname)
         
-        printf '[%s] %s@%s %s%s %s%s %s\n> ' \
-            $time $user $host \
+        printf '%s@%s %s%s %s%s %s\n> ' \
+            $host $user \
             (set_color $fish_color_cwd) $current_dir \
             (set_color normal) $git_branch \
             $pipestatus_string 
