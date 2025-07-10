@@ -1,0 +1,16 @@
+
+
+[user]
+    name = Tim Carlsson
+    email = timcarlsson0203@gmail.com
+
+[core]
+    editor = vim
+    autocrlf = input
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  cm = commit
+  lg = log --oneline --graph --decorate --all

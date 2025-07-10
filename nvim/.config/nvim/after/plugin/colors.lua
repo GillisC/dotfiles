@@ -12,7 +12,7 @@
 -- equilibrium dark or gray
 
 function ColorMyPencils(color)
-	color = color or "base16-0x96f"
+	color = color or "kanso-zen" -- goated theme
 	vim.cmd.colorscheme(color)
 
     -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

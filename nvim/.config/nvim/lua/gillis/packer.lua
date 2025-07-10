@@ -72,4 +72,5 @@ return require('packer').startup(function(use)
             require("colorizer").setup()
         end
     }
+    use "webhooked/kanso.nvim"
 end)
