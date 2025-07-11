@@ -18,11 +18,15 @@
   ],
   "modules-right": [
     "tray",
+    "pulseaudio",
+    "custom/separator",
     "cpu",
     "custom/separator",
     "memory",
     "custom/separator",
     "battery",
+    "custom/separator",
+    "network",
     "custom/separator",
     "clock"
   ],
@@ -67,6 +71,7 @@
     "scroll-step": 5,
     "max-volume": 150,
     "format": "vol {volume}%",
+    "format-muted": "vol muted",
     "format-bluetooth": "vol {volume}%",
     "nospacing": 1,
     "on-click": "pavucontrol",
