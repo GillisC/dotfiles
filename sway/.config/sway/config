@@ -277,7 +277,7 @@ mode $special {
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
-
+    bindsym $mod+z mode "defaul"
 }
 
 bindsym --to-code $mod+z mode $special 
