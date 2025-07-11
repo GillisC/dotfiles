@@ -13,10 +13,12 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+
+# preferred applications
 set $term kitty
-# Your preferred application launcher
 set $menu wofi --show drun
+set $file-explorer thunar
+set $browser firefox
 
 font pango:Iosevka Term 10
 
@@ -50,6 +52,7 @@ exec swayidle -w \
 #
 # Example configuration:
 #
+
 input type:touchpad {
     dwt enabled
     tap enabled
@@ -58,8 +61,10 @@ input type:touchpad {
 }
 #
 input type:keyboard {
-    xkb_options "caps:escape"
+    xkb_layout us,se
+    xkb_options "caps:escape,grp:rctrl_toggle" 
 }
+
 #
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
@@ -74,6 +79,9 @@ input type:keyboard {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # TODO: find better alternative
+    bindsym $mod+Ctrl+f exec $browser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -255,18 +263,24 @@ client.urgent           $er $bg #ffffff $er $bg
 default_border pixel 2
 default_floating_border pixel 2
 
-mode "special" {
+#
+# special mode
+#
+
+set $special "special: [c]olorpicker, [s]creenshot"
+
+mode $special {
     # Picks the color at cursor and saves it as hex in clipboard
     bindsym c exec wl-color-picker clipboard; mode "default"
 
-    bindsym s exec slurp | grim -g - - | w1-copy; mode "default"
+    bindsym s exec slurp | grim -g - - | wl-copy; mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 
 }
 
-bindsym $mod+z mode "special"
+bindsym --to-code $mod+z mode $special 
 
 #
 # power mode

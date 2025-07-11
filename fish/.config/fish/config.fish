@@ -13,6 +13,8 @@ abbr --add gp 'git push'
 abbr --add fishs 'source ~/.config/fish/config.fish'
 abbr --add tmuxs 'tmux source ~/.config/tmux/tmux.conf'
 
+abbr --add pacman 'sudo pacman -S'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end

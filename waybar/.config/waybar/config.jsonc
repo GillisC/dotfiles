@@ -38,21 +38,21 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "cpu {usage}%",
+    "format": "CPU {usage}%",
     "interval": 2,
     "states": {
       "critical": 90
     }
   },
   "memory": {
-    "format": "mem {percentage}%",
+    "format": "RAM {percentage}%",
     "interval": 2,
     "states": {
       "critical": 80
     }
   },
   "battery": {
-    "format": "bat {capacity}%",
+    "format": "BAT {capacity}%",
     "interval": 5,
     "states": {
       "warning": 20,
@@ -61,8 +61,8 @@
     "tooltip": false
   },
   "network": {
-    "format-wifi": "wifi {bandwidthDownBits}",
-    "format-ethernet": "enth {bandwidthDownBits}",
+    "format-wifi": "WIFI {bandwidthDownBits}",
+    "format-ethernet": "ETH {bandwidthDownBits}",
     "format-disconnected": "no network",
     "interval": 5,
     "tooltip": false
@@ -70,14 +70,14 @@
   "pulseaudio": {
     "scroll-step": 5,
     "max-volume": 150,
-    "format": "vol {volume}%",
-    "format-muted": "vol muted",
-    "format-bluetooth": "vol {volume}%",
+    "format": "VOL {volume}%",
+    "format-muted": "VOL muted",
+    "format-bluetooth": "VOL {volume}%",
     "nospacing": 1,
     "on-click": "pavucontrol",
     "tooltip": false
   },
   "clock": {
-    "format": "{:%a %d %b  %H:%M:%S}"
+    "format": "{:%a %d %b - %H:%M:%S}"
   }
 }
