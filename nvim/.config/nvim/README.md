@@ -1,23 +1,22 @@
-# Installing `packer.nvim`
-
-To set up `packer.nvim` as your plugin manager for Neovim, follow these steps:
-
+# Setup
+After cloning this config you will have to setup 'packer' which manages plugins.
 ## Clone `packer.nvim`
-
 Run the following command to clone `packer.nvim` into the appropriate directory:
-
-```bash
+```sh
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-
 Navigate to the packer file and :so -> :PackerSync to download plugins.
 
-Exit and enter neovim to setup the rest.
+## External dependencies
+Some plugins depend on external dependencies, these are:
+- zip (or any unzip tool)
+- node and npm
 
-## So i dont forget
-Add plugins by modifying the `packer.lua` file. Configs for a plugin is added in the same folder and add the `require` to the `lua/gillis/init.lua`
+# Usage
+Add plugins by modifying the `packer.lua` file. Configuration for a plugin should be placed
+inside a separate lua file in the same directory which is then required inside of `init/gillis/init.lua`
 
 # Todo
--- make surround not add the whitespace
-
+- make surround not add the whitespace
+- harpoon? 

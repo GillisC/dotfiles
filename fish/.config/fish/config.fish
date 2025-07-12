@@ -15,6 +15,13 @@ abbr --add tmuxs 'tmux source ~/.config/tmux/tmux.conf'
 
 abbr --add pacman 'sudo pacman -S'
 
+abbr --add conf 'nvim .config'
+
+# rust
+abbr --add cb 'cargo build'
+abbr --add cr 'cargo run' 
+abbr --add ct 'cargo test'
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
