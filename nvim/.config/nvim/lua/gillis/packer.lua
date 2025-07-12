@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     use {
@@ -18,20 +18,20 @@ return require('packer').startup(function(use)
         as = "kanagawa",
     }
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use({'neovim/nvim-lspconfig'})
-    use({'hrsh7th/nvim-cmp'})
-    use({'hrsh7th/cmp-nvim-lsp'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use({ 'neovim/nvim-lspconfig' })
+    use({ 'hrsh7th/nvim-cmp' })
+    use({ 'hrsh7th/cmp-nvim-lsp' })
     use {
         "williamboman/mason.nvim",
-        run = ":MasonUpdate" -- Automatically update Mason
+        run = ":MasonUpdate"                -- Automatically update Mason
     }
     use "williamboman/mason-lspconfig.nvim" -- Bridges Mason with LSP
     use "L3MON4D3/LuaSnip"
     use 'davidgranstrom/nvim-markdown-preview'
     use {
         "nvim-lualine/lualine.nvim",
-        requires = { "nvim-tree/nvim-web-devicons", opt=true }
+        requires = { "nvim-tree/nvim-web-devicons", opt = true }
     }
     use({
         "stevearc/oil.nvim",
@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
     use({
         "windwp/nvim-autopairs",
         event = "InsertEnter",
-        config = function ()
+        config = function()
             require("nvim-autopairs").setup {}
         end
     })

@@ -38,18 +38,18 @@ vim.keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<CR>")
 
 -- Makes it possible to toggle between header <==> source files
 vim.keymap.set("n", "<leader>gh", function()
-  vim.lsp.buf_request(0, 'textDocument/switchSourceHeader', {
-    uri = vim.uri_from_bufnr(0)
-  }, function(err, result)
-    if result then
-      vim.cmd('edit ' .. vim.uri_to_fname(result))
-    else
-      print("No alternate file found")
-    end
-  end)
+    vim.lsp.buf_request(0, 'textDocument/switchSourceHeader', {
+        uri = vim.uri_from_bufnr(0)
+    }, function(err, result)
+        if result then
+            vim.cmd('edit ' .. vim.uri_to_fname(result))
+        else
+            print("No alternate file found")
+        end
+    end)
 end, { desc = "Switch between header/source" })
 
 -- Custom commands
 vim.api.nvim_create_user_command("Config", function()
     vim.cmd("vsplit Oil ~/.config/nvim")
-end, { desc = "Open Neovim config directory in Oil"})
+end, { desc = "Open Neovim config directory in Oil" })
