@@ -6,7 +6,8 @@ alias neofetch='fastfetch'
 
 # abbreviations
 abbr --add gs 'git status'
-abbr --add gc 'git checkout'
+abbr --add gc 'git commit -m'
+abbr --add gco 'git checkout -b'
 abbr --add ga 'git add .'
 abbr --add gp 'git push'
 

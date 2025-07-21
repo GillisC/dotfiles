@@ -20,3 +20,4 @@ inside a separate lua file in the same directory which is then required inside o
 # Todo
 - make surround not add the whitespace
 - harpoon? 
+- expand selection using treesitter

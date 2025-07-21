@@ -5,6 +5,7 @@ require("mason-lspconfig").setup {
         "ruff",
         "clangd",
         "pyright",
+        "html",
     }
 }
 
@@ -22,6 +23,7 @@ require("lspconfig").clangd.setup {
     cmd = { "clangd", "--compile-commands-dir=build" }
 }
 require("lspconfig").pyright.setup {}
+require("lspconfig").html.setup {}
 
 
 local cmp = require("cmp")
