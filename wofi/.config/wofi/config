@@ -10,5 +10,5 @@ line_wrap=word
 lines=10
 width=800
 no_actions=true
-prompt= Search 
+prompt=Search 
 hide_scroll=true

@@ -6,32 +6,46 @@
 
 #window {
   color: #fcfcfc;
-  border-color: #fcfcfc;
   border-style: solid;
   border-width: 1px;
 
   /*Linear gradient background instead of standard background, because it makes cleaner border-radius cuts, issa bug :p*/
   background-image: linear-gradient(to bottom, #141216 100%);
-  border-radius: 2px;
+  border-radius: 4px;
 }
+
 #scroll {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 12px;
   border-top-style: solid;
   border-width: 1px;
-  border-color: #fcfcfc;
+  border-color: #222222; /* Optional: match your theme */
 }
+
 #inner-box {
-  padding-top: 12px;
+  padding-top: 1px;
 }
+
 #entry {
   border-style: none;
-  border-color: #fcfcfc;
+  border: none;
+  outline: none;
   color: #fcfcfc;
-  padding: 6px;
-  margin-bottom: 8px;
+  padding: 1px;
+  margin-bottom: 4px;
   margin-left: 12px;
-  margin-right: 12;
-
+  margin-right: 12px;
   border-radius: 2px;
+}
+
+#entry:nth-child(even) {
+    background: #313131
+}
+
+#entry:nth-child(odd) {
+    background: #2c2c2c
+}
 }
 
 #entry:selected {
@@ -42,9 +56,8 @@
 }
 
 #input {
-  background-color: #141216;
+  background-color: #1a1a1a;
   color: #fcfcfc;
-  border-color: #fcfcfc;
 
   border-style: none;
   border-bottom-style: solid;
@@ -56,18 +69,23 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 
-  padding: 12px;
+  padding: 6px;
   margin: 8px;
 }
+
 #input:focus {
   background: #222222;
   background-color: #222222;
   border-color: #017875;
-  font-style: italic;
+  font-style: normal;
   font-size: 16px;
 }
 
 #img {
   padding: 4px;
   margin-right: 6px;
+}
+
+#entry, #window, #inner-box, #scroll {
+  box-sizing: border-box;
 }
