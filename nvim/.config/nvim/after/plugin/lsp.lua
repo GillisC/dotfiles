@@ -26,7 +26,6 @@ require("lspconfig").pyright.setup {}
 require("lspconfig").html.setup {}
 require("lspconfig").cssls.setup {}
 
-
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = cmp.mapping.preset.insert({
