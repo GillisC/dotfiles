@@ -2,6 +2,7 @@ set -U fish_user_paths /opt/nvim $fish_user_path
 
 # Aliases
 alias neofetch='fastfetch'
+tmux
 
 
 # abbreviations
