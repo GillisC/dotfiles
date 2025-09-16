@@ -40,7 +40,7 @@ output * bg /home/tim/dotfiles/wallpapers/cyberpunk.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	     timeout 300 'swaylock -f -c 000000' \
+	     timeout 900 'swaylock -f -c 000000' \
 	     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 	     before-sleep 'swaylock -f -c 000000'
 
@@ -208,6 +208,7 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 #
@@ -239,7 +240,6 @@ bar {
             background #222222
                 statusline #9b8d7f
                 separator #9b8d7f
-
                 focused_workspace #9b8d7f #9b8d7f #222222
                 inactive_workspace #222222 #222222 #9b8d7f
                 active_workspace #222222 #222222 #9b8d7f
@@ -277,7 +277,7 @@ mode $special {
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+z mode "defaul"
+    bindsym $mod+z mode "default"
 }
 
 bindsym --to-code $mod+z mode $special 

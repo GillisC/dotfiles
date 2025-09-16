@@ -1,0 +1,18 @@
+font=Iosevka Nerd Font 12
+
+background-color=#222222
+text-color=#fcfcfc
+border-color=#017875
+
+border-size=2
+padding=8
+margin=10
+width=300
+max-visible=5
+default-timeout=5000 
+
+anchor=top-right
+layer=overlay
+
+# Behavior
+group-by=app-name
