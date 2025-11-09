@@ -1,7 +1,8 @@
 set -U fish_user_paths /opt/nvim $fish_user_path
-
+fish_vi_key_bindings
 # Aliases
 alias neofetch='fastfetch'
+alias v='nvim'
 tmux
 
 
@@ -16,8 +17,6 @@ abbr --add fishs 'source ~/.config/fish/config.fish'
 abbr --add tmuxs 'tmux source ~/.config/tmux/tmux.conf'
 
 abbr --add pacman 'sudo pacman -S'
-
-abbr --add conf 'nvim .config'
 
 # rust
 abbr --add cb 'cargo build'
