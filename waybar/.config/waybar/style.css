@@ -2,8 +2,8 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: "Iosevka Term";
-  font-size: 16px;
+  font-family: "Inter Display, GeistMono Nerd Font";
+  font-size: 18px;
   padding: 0;
 }
 
@@ -47,4 +47,33 @@ tooltip {
 #battery, #tray, #clock, #cpu, #pulseaudio, #memory {
   /* background-color: none; */
   color: #b0b0b0;
+}
+
+.modules-right > widget > box {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 0 10px;
+    padding: 0 5px;
+    background: transparent;
+}
+
+#cpu, #memory, #disk, #network, #clock {
+    padding: 2px 8px;
+    margin: 0 2px;
+    transition: all 0.4s ease;
+}
+
+
+tooltip {
+    background: rgba(30, 30, 46, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* Specifically target the calendar text */
+tooltip label {
+    font-family: "Inter Display, GeistMono Nerd Font";
+    font-size: 24px;
+    color: #cdd6f4;
 }
