@@ -8,23 +8,12 @@
 }
 
 window#waybar {
-  background: #222222;
-  color: #b0b0b0;
+  background: #14171f;
+  color: #cbd5e0;
 }
 
 tooltip {
-  background-color: #222222;
-}
-
-#clock,
-#tray,
-#cpu,
-#memory,
-#battery,
-#network,
-#pulseaudio {
-  margin: 2px 2px 0px 0px;
-  padding: 2px 8px;
+  background-color: #14171f;;
 }
 
 #workspaces button {
@@ -35,18 +24,23 @@ tooltip {
 }
 
 #workspaces button.focused {
-  background-color: #017875;
-  color: #222222;
+  background-color: #52becc;;
+  color: #14171f;
 }
 
 #workspaces button.active {
-  background-color: #222222;
-  color: #017875;
+  background-color: #14171f;
+  color: #52becc;
 }
 
 #battery, #tray, #clock, #cpu, #pulseaudio, #memory {
+    min-width: 60px;
+    padding: 2px;
   /* background-color: none; */
-  color: #b0b0b0;
+}
+
+label {
+    all: unset
 }
 
 .modules-right > widget > box {
