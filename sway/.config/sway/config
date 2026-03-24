@@ -20,6 +20,9 @@ set $menu wofi --show drun
 set $file-explorer thunar
 set $browser firefox
 
+# night light
+exec_always sh -c "sleep 2 && gammastep"
+
 font pango:Iosevka Term 10
 
 ### Output configuration
@@ -31,6 +34,8 @@ output * bg /home/tim/dotfiles/wallpapers/cyberpunk.png fill
 #
 # Example configuration:
 #
+output DP-3 resolution 2560x1440@165Hz position 0,0
+output HDMI-A-1 resolution 1920x1080@60Hz position -1920,0
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -59,10 +64,17 @@ input type:touchpad {
     natural_scroll enabled
     middle_emulation enabled
 }
-#
+
+input type:pointer {
+    accel_profile flat
+    pointer_accel 0
+}   
+
 input type:keyboard {
     xkb_layout us,se
     xkb_options "caps:escape,grp:rctrl_toggle" 
+    repeat_delay 200
+    repeat_rate 40
 }
 
 #
@@ -78,7 +90,7 @@ input type:keyboard {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $menu
 
     # TODO: find better alternative
     bindsym $mod+Ctrl+f exec $browser
@@ -146,6 +158,7 @@ input type:keyboard {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
     workspace 5 gaps horizontal 100
     workspace 5 gaps vertical 30
     workspace 5 gaps inner 20
@@ -190,10 +203,6 @@ input type:keyboard {
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -210,7 +219,7 @@ mode "resize" {
     bindsym Escape mode "default"
     bindsym $mod+r mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 #
 # Utilities:
 #
@@ -301,6 +310,8 @@ mode $exit {
     }
 }
 
-bindsym --to-code $mod+x mode $exit
+bindsym --to-code $mod+p mode $exit
+
+for_window [app_id="pavucontrol"] floating enable, resize set 600 400, move position center
 
 include /etc/sway/config.d/*
