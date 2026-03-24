@@ -5,7 +5,7 @@
 }
 
 #window {
-  color: #fcfcfc;
+  color: #d9ac3d;
   border-style: solid;
   border-width: 1px;
 
@@ -46,7 +46,6 @@
 #entry:nth-child(odd) {
     background: #2c2c2c
 }
-}
 
 #entry:selected {
   background: #27232b;
@@ -63,7 +62,7 @@
   border-bottom-style: solid;
   border-width: 1px;
 
-  font-style: normal;
+  font-style: italic;
 
   border-radius: 2px;
   border-bottom-left-radius: 0px;
