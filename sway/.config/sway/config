@@ -20,9 +20,6 @@ set $menu wofi --show drun
 set $file-explorer thunar
 set $browser firefox
 
-# night light
-exec_always sh -c "sleep 2 && gammastep"
-
 font pango:Iosevka Term 10
 
 ### Output configuration
@@ -34,8 +31,6 @@ output * bg /home/tim/dotfiles/wallpapers/cyberpunk.png fill
 #
 # Example configuration:
 #
-output DP-3 resolution 2560x1440@165Hz position 0,0
-output HDMI-A-1 resolution 1920x1080@60Hz position -1920,0
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
@@ -64,17 +59,10 @@ input type:touchpad {
     natural_scroll enabled
     middle_emulation enabled
 }
-
-input type:pointer {
-    accel_profile flat
-    pointer_accel 0
-}   
-
+#
 input type:keyboard {
     xkb_layout us,se
     xkb_options "caps:escape,grp:rctrl_toggle" 
-    repeat_delay 200
-    repeat_rate 40
 }
 
 #
@@ -90,7 +78,7 @@ input type:keyboard {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+Shift+d exec $menu
+    bindsym $mod+d exec $menu
 
     # TODO: find better alternative
     bindsym $mod+Ctrl+f exec $browser
@@ -222,7 +210,7 @@ mode "resize" {
     bindsym Escape mode "default"
     bindsym $mod+r mode "default"
 }
-bindsym $mod+Shift+r mode "resize"
+bindsym $mod+r mode "resize"
 #
 # Utilities:
 #
@@ -313,8 +301,6 @@ mode $exit {
     }
 }
 
-bindsym --to-code $mod+p mode $exit
-
-for_window [app_id="pavucontrol"] floating enable, resize set 600 400, move position center
+bindsym --to-code $mod+x mode $exit
 
 include /etc/sway/config.d/*

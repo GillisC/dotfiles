@@ -1,10 +1,11 @@
 set -U fish_user_paths /opt/nvim $fish_user_path
-fish_vi_key_bindings
 
-set fish_greeting
-
+# Aliases
 alias neofetch='fastfetch'
+tmux
 
+
+# abbreviations
 abbr --add gs 'git status'
 abbr --add gc 'git commit -m'
 abbr --add gco 'git checkout -b'
@@ -16,6 +17,9 @@ abbr --add tmuxs 'tmux source ~/.config/tmux/tmux.conf'
 
 abbr --add pacman 'sudo pacman -S'
 
+abbr --add conf 'nvim .config'
+
+# rust
 abbr --add cb 'cargo build'
 abbr --add cr 'cargo run' 
 abbr --add ct 'cargo test'
