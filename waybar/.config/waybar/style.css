@@ -33,30 +33,32 @@ tooltip {
   color: #52becc;
 }
 
-#battery, #tray, #clock, #cpu, #pulseaudio, #memory {
-    min-width: 60px;
-    padding: 2px;
-  /* background-color: none; */
-}
-
 label {
-    all: unset
+    padding: 0;
+    margin: 0;
 }
 
-.modules-right > widget > box {
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-    border-right: 2px solid rgba(255, 255, 255, 0.2);
-    margin: 0 10px;
-    padding: 0 5px;
-    background: transparent;
-}
-
-#cpu, #memory, #disk, #network, #clock {
-    padding: 2px 8px;
-    margin: 0 2px;
+#cpu, 
+#memory, 
+#disk, 
+#network, 
+#clock,
+#tray,
+#pulseaudio {
+    padding: 0 1rem;
+    margin: 0;
     transition: all 0.4s ease;
 }
 
+/* Because the icon is wierd */
+#memory {
+    margin-right: 4px;
+}
+
+/* To sit more flush */
+#pulseaudio {
+    margin-right: -4px;
+}
 
 tooltip {
     background: rgba(30, 30, 46, 0.9);
