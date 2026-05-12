@@ -1,9 +1,8 @@
-set -U fish_user_paths /opt/nvim $fish_user_path
 fish_vi_key_bindings
 
 set fish_greeting
 
-alias neofetch='fastfetch'
+fish_add_path ~/.cargo/bin
 
 abbr --add gs 'git status'
 abbr --add gc 'git commit -m'
