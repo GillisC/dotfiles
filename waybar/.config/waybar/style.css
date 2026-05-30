@@ -3,7 +3,7 @@
   border-radius: 0;
   min-height: 0;
   font-family: "Inter Display, GeistMono Nerd Font";
-  font-size: 18px;
+  font-size: 16px;
   padding: 0;
 }
 
@@ -17,7 +17,7 @@ tooltip {
 }
 
 #workspaces button {
-  padding: 2px 2px;
+  padding: 1px 1px;
   margin: 4px 4px;
   border-radius: 1px;
   color: #017875;
@@ -39,8 +39,6 @@ label {
 }
 
 #cpu, 
-#memory, 
-#disk, 
 #network, 
 #clock,
 #tray,
@@ -48,11 +46,6 @@ label {
     padding: 0 1rem;
     margin: 0;
     transition: all 0.4s ease;
-}
-
-/* Because the icon is wierd */
-#memory {
-    margin-right: 4px;
 }
 
 /* To sit more flush */
