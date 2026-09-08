@@ -41,6 +41,7 @@ label {
 #cpu, 
 #network, 
 #clock,
+#battery,
 #tray,
 #pulseaudio {
     padding: 0 1rem;

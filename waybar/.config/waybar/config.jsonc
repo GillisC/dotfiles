@@ -15,6 +15,7 @@
     "modules-right": [
         "tray",
         "cpu",
+        "battery",
         "network",
         "pulseaudio"
     ],
@@ -34,8 +35,28 @@
         },
         "tooltip": true
     },
+    "battery": {
+        "states": {
+            "critical": 5,
+            "low": 25,
+            "medium": 50,
+            "high": 75
+        },
+        "format": "{icon}",
+        "format-charging": "{icon}",
+        "format-plugged": "",
+        "format-icons": {
+            "critical": "",  // \uf244
+            "low": "",       // \uf243
+            "medium": "",    // \uf242
+            "high": "",      // \uf241
+            "default": ""    // \uf240
+        },
+        "tooltip": true,
+        "tooltip-format": "{capacity}% ({time})"
+    },    
     "network": {
-        "format-wifi": " {bandwidthDownBits}",
+        "format-wifi": "",
         "format-ethernet": "󰈀 {bandwidthDownBits}",
         "family": "ipv4",
         "format-ethernet": "󰈀",
